@@ -12,10 +12,6 @@ h6 {
 	display: inline;
 }
 
-.larger-text {
-	font-size: larger;
-}
-
 * {
 	transition: background-color 200ms ease,
 		opacity 200ms ease,
