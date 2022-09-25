@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 	<title>Hotel Costa Meloneras</title>
+	<meta name="description" content="Reserva un hotel en la Costa de Meloneras" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link defer rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-		body,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: "Raleway", Arial, Helvetica, sans-serif
-		}
-	</style>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css" />
+	<!-- Open Graph -->
+	<meta property="og:title" content="Lopesan" />
+	<meta property="og:description" content="Consigue una residencia habitacional con Lopesan" />
+	<meta property="og:image"
+		content="https://www.lopesan.com/img/images/286/vista-dunas-de-maspalomas-gran-canaria-lopesan.jpg" />
+	<meta property="og:url" content="https://www.lopesan.com/es/lopesan-residences/" />
+	<meta property="og:site_name" content="Lopesan" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<!-- Twitter -->
+	<neta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Lopesan" />
+	<meta name="twitter:description" content="Consigue una residencia habitacional con Lopesan" />
+	<meta name="twitter:image"
+		content="https://www.lopesan.com/img/images/286/vista-dunas-de-maspalomas-gran-canaria-lopesan.jpg" />
 </head>
 
 <body class="w3-light-grey">
 
 	<!-- Navigation Bar -->
-	<div class="w3-bar w3-white w3-large">
-		<a href="#" class="w3-bar-item w3-button w3-green w3-mobile"><i class="fa fa-bed w3-margin-right"></i>LOPESAN</a>
-		<a href="#Habitaciones" class="w3-bar-item w3-button w3-mobile">Habitaciones</a>
-		<a href="#Sobre Nosotros" class="w3-bar-item w3-button w3-mobile">Sobre Nosotros</a>
-		<a href="#Contacto" class="w3-bar-item w3-button w3-mobile">Contacto</a>
-		<a href="#Contacto" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Reserva ahora</a>
-	</div>
+	<nav class="w3-bar w3-white w3-large">
+		<ul class="nav-list">
+			<li class="nav-elem">
+				<a href="#" class="w3-bar-item w3-button w3-green w3-mobile"><i
+						class="fa fa-bed w3-margin-right"></i>LOPESAN</a>
+			</li>
+			<li class="nav-elem">
+				<a href="#Habitaciones" class="w3-bar-item w3-button w3-mobile">Habitaciones</a>
+			</li>
+			<li class="nav-elem">
+				<a href="#Sobre Nosotros" class="w3-bar-item w3-button w3-mobile">Sobre Nosotros</a>
+			</li>
+			<li class="nav-elem"> <a href="#Contacto" class="w3-bar-item w3-button w3-mobile">Contacto</a></li>
+			<li class="nav-elem"> <a href="#Contacto" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Reserva
+					ahora</a> </li>
+		</ul>
+	</nav>
 	<!-- Header -->
 	<header class="w3-display-container w3-content" style="max-width:1500px;">
 		<img class="w3-image"
@@ -44,22 +61,24 @@
 				<form action="/action_page.php" target="_blank">
 					<div class="w3-row-padding" style="margin:0 -16px;">
 						<div class="w3-half w3-margin-bottom">
-							<label><i class="fa fa-calendar-o"></i> Llegada</label>
-							<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+							<label for="Llegada_in1"><i class="fa fa-calendar-o"></i> Llegada</label>
+							<input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckIn" required
+								id="Llegada_in1">
 						</div>
 						<div class="w3-half">
-							<label><i class="fa fa-calendar-o"></i> Salida</label>
-							<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+							<label for="Salida_in1"><i class="fa fa-calendar-o"></i> Salida</label>
+							<input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckOut" required
+								id="Salida_in1">
 						</div>
 					</div>
 					<div class="w3-row-padding" style="margin:8px -16px;">
 						<div class="w3-half w3-margin-bottom">
-							<label><i class="fa fa-male"></i> Adultos</label>
-							<input class="w3-input w3-border" type="number" value="1" name="Adultos" min="1" max="6">
+							<label for="Adultos_in1"><i class="fa fa-male"></i> Adultos</label>
+							<input class="w3-input w3-border" type="number" value="1" name="Adultos" min="1" max="6" id="Adultos_in">
 						</div>
 						<div class="w3-half">
-							<label><i class="fa fa-child"></i> Niños</label>
-							<input class="w3-input w3-border" type="number" value="0" name="Niños" min="0" max="6">
+							<label for="Niños_in1"><i class="fa fa-child"></i> Niños</label>
+							<input class="w3-input w3-border" type="number" value="0" name="Niños" min="0" max="6" id="Niños_in1">
 						</div>
 					</div>
 					<button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Buscar
@@ -70,7 +89,7 @@
 	</header>
 
 	<!-- Page content -->
-	<div class="w3-content" style="max-width:1532px;">
+	<main class="w3-content" style="max-width:1532px;">
 
 		<div class="w3-container w3-margin-top" id="Habitaciones">
 			<h3>Habitaciones</h3>
@@ -79,20 +98,20 @@
 
 		<div class="w3-row-padding">
 			<div class="w3-col m3">
-				<label><i class="fa fa-calendar-o"></i> Llegada</label>
-				<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+				<label for="Llegada_in2"><i class="fa fa-calendar-o"></i> Llegada</label>
+				<input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckIn" required id="Llegada_in2">
 			</div>
 			<div class="w3-col m3">
-				<label><i class="fa fa-calendar-o"></i> Salida</label>
-				<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+				<label for="Salida_in2"><i class="fa fa-calendar-o"></i> Salida</label>
+				<input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckOut" required id="Salida_in2">
 			</div>
 			<div class="w3-col m2">
-				<label><i class="fa fa-male"></i> Adultos</label>
-				<input class="w3-input w3-border" type="number" placeholder="1">
+				<label for="Adultos_in2"><i class="fa fa-male"></i> Adultos</label>
+				<input class="w3-input w3-border" type="number" placeholder="1" name="Adultos" min="2" max="6" id="Adultos_in">
 			</div>
 			<div class="w3-col m2">
-				<label><i class="fa fa-child"></i> Niños</label>
-				<input class="w3-input w3-border" type="number" placeholder="0">
+				<label for="Niños_in2"><i class="fa fa-child"></i> Niños</label>
+				<input class="w3-input w3-border" type="number" value="0" name="Niños" min="0" max="6" id="Niños_in2">
 			</div>
 			<div class="w3-col m2">
 				<label><i class="fa fa-search"></i> Buscar</label>
@@ -148,7 +167,7 @@
 		<div class="w3-row-padding" id="Sobre Nosotros">
 			<div class="w3-col l4 12">
 				<h3>Sobre Nosotros</h3>
-				<h6>El hotel Lopesan Costa Meloneras Resort & Spa es el lugar perfecto para disfrutar de unas vacaciones
+				<p>El hotel Lopesan Costa Meloneras Resort & Spa es el lugar perfecto para disfrutar de unas vacaciones
 					inolvidables. Este emblemático Resort se encuentra en Meloneras, la zona turística más exclusiva de la isla de
 					Gran Canaria. Los sorprendentes parajes de la Reserva Natural de las Dunas de Maspalomas y su emblemático
 					Boulevard, acompañado del icónico Faro de Maspalomas dotan al destino de un carácter único en el que poder
@@ -160,7 +179,7 @@
 					de 76.000 m2 de superficie, con más de 800 palmeras, de 100 especies y subespeci es diferentes, que nos
 					acompañarán hasta nuestra habitación y nos harán sentir en un oasis en medio de este paisaje desértico de
 					dunas que se pierden en el mar. Todo está pensado para relajarnos, y experimentar un ambiente acogedor y
-					cercano que cautiva al instante.</h6>
+					cercano que cautiva al instante.</p>
 				<p>Aceptamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
 						class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i
 						class="fa fa-cc-paypal w3-large"></i></p>
@@ -223,7 +242,7 @@
 							<span class="w3-display-bottomleft w3-padding">Alemania</span>
 						</div>
 					</div>
-					<div class="w3k-half w3-margin-bottom">
+					<div class="w3-half w3-margin-bottom">
 						<div class="w3-display-container">
 							<img
 								src="https://images.unsplash.com/photo-1597086831879-756db15e81d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8JTIwYXVzdHJpYXxlbnwwfHwwfHw%3D&w=1000&q=80"
@@ -250,16 +269,20 @@
 			<i class="fa fa-phone w3-text-green" style="width:30px"></i> Teléfono: +34 928 128 100<br>
 			<i class="fa fa-envelope w3-text-green" style="width:30px"> </i> Email: costameloneras@lopesan.com<br>
 			<form action="/action_page.php" target="_blank">
-				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
-				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Mensaje">
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"
+						aria-label="Nombre"></p>
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"
+						aria-label="Email"></p>
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Mensaje"
+						aria-label="Mensaje">
 				</p>
-				<p><button class="w3-button w3-black w3-padding-large" type="submit">ENVIAR MENSAJE</button></p>
+				<p><button class="w3-button w3-black w3-padding-large" type="submit" aria-label="Enviar mensaje">ENVIAR
+						MENSAJE</button></p>
 			</form>
 		</div>
 
 		<!-- End page content -->
-	</div>
+	</main>
 
 	<!-- Footer -->
 	<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
