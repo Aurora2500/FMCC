@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Lopesan</title>
+	<meta name="description" content="Consigue una residencia habitacional con Lopesan">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="header-brand">
+			<img src="./fish.png" alt="lopesan" class="animated-logo" height="90px" width="90px">
+			<h2>Lopesan</h2>
+		</div>
+		<ul>
+			<li><a href="https://example.com">página principal</a></li>
+			<li><a href="https://example.com">Hoteles</a></li>
+			<li><a href="https://example.com">AAA</a></li>
+		</ul>
+	</header>
+	<main>
+		<div class="card-list">
+			<article class="card">
+				<div class="card-header">
+					<h3 class="card-title">Hotel 1</h3>
+				</div>
+				<div class="card-body">
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
+				</div>
+				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
+			</article>
+			<article class="card">
+				<div class="card-header">
+					<h3 class="card-title">Hotel 2</h3>
+				</div>
+				<div class="card-body">
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
+				</div>
+				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
+			</article>
+			<article class="card">
+				<div class="card-header">
+					<h3 class="card-title">Hotel 3</h3>
+				</div>
+				<div class="card-body">
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
+				</div>
+				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
+			</article>
+		</div>
+		<form action="./reservar.php" target="_blank" method="post">
+			<div class="input-base">
+				<select name="hotel" id="hotel_select">
+					<option value=""></option>
+					<option value="hotel_1">Hotel 1</option>
+					<option value="hotel_2">Hotel 2</option>
+					<option value="hotel_3">Hotel 3</option>
+				</select>
+				<label for="hotel_select">Hotel de residencia</label>
+			</div>
+			<div class="input-base">
+				<input type="date" value="" name="arrival_date" id="arrival_date_input" required>
+				<label for="arrival_date_input">Fecha de llegada</label>
+			</div>
+			<div class="input-base">
+				<input type="date" name="departure_date" id="departure_date_input">
+				<label for="departure_date_input">Fecha de salida</label>
+			</div>
+			<div class="input-base">
+				<input type="number" name="people" id="people_input">
+				<label for="people_input">Número de personas</label>
+			</div>
+			<input class="submit" type="submit" value="Reservar">
+		</form>
+	</main>
+</body>
+
+</html>
