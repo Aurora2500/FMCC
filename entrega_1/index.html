@@ -1,82 +1,280 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Lopesan</title>
-	<meta name="description" content="Consigue una residencia habitacional con Lopesan">
-	<link rel="stylesheet" href="style.css">
+	<title>Hotel Costa Meloneras</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Raleway", Arial, Helvetica, sans-serif
+		}
+	</style>
 </head>
 
-<body>
-	<header>
-		<div class="header-brand">
-			<img src="./fish.png" alt="lopesan" class="animated-logo" height="90px" width="90px">
-			<h2>Lopesan</h2>
+<body class="w3-light-grey">
+
+	<!-- Navigation Bar -->
+	<div class="w3-bar w3-white w3-large">
+		<a href="#" class="w3-bar-item w3-button w3-green w3-mobile"><i class="fa fa-bed w3-margin-right"></i>LOPESAN</a>
+		<a href="#Habitaciones" class="w3-bar-item w3-button w3-mobile">Habitaciones</a>
+		<a href="#Sobre Nosotros" class="w3-bar-item w3-button w3-mobile">Sobre Nosotros</a>
+		<a href="#Contacto" class="w3-bar-item w3-button w3-mobile">Contacto</a>
+		<a href="#Contacto" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Reserva ahora</a>
+	</div>
+	<!-- Header -->
+	<header class="w3-display-container w3-content" style="max-width:1500px;">
+		<img class="w3-image"
+			src="https://www.lopesan.com/img/images/1248/imagen-emblematica-fachada-hotel-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg"
+			alt="The Hotel" style="min-width:1000px" width="1500" height="800">
+		<div class="w3-display-left w3-padding w3-col l6 m8">
+			<div class="w3-container w3-green">
+				<h2><i class="fa fa-bed w3-margin-right"></i>Costa Meloneras</h2>
+			</div>
+			<div class="w3-container w3-white w3-padding-16">
+				<form action="/action_page.php" target="_blank">
+					<div class="w3-row-padding" style="margin:0 -16px;">
+						<div class="w3-half w3-margin-bottom">
+							<label><i class="fa fa-calendar-o"></i> Llegada</label>
+							<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+						</div>
+						<div class="w3-half">
+							<label><i class="fa fa-calendar-o"></i> Salida</label>
+							<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>
+						</div>
+					</div>
+					<div class="w3-row-padding" style="margin:8px -16px;">
+						<div class="w3-half w3-margin-bottom">
+							<label><i class="fa fa-male"></i> Adultos</label>
+							<input class="w3-input w3-border" type="number" value="1" name="Adultos" min="1" max="6">
+						</div>
+						<div class="w3-half">
+							<label><i class="fa fa-child"></i> Niños</label>
+							<input class="w3-input w3-border" type="number" value="0" name="Niños" min="0" max="6">
+						</div>
+					</div>
+					<button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Buscar
+						disponibilidad</button>
+				</form>
+			</div>
 		</div>
-		<ul>
-			<li><a href="https://example.com">página principal</a></li>
-			<li><a href="https://example.com">Hoteles</a></li>
-			<li><a href="https://example.com">AAA</a></li>
-		</ul>
 	</header>
-	<main>
-		<div class="card-list">
-			<article class="card">
-				<div class="card-header">
-					<h3 class="card-title">Hotel 1</h3>
-				</div>
-				<div class="card-body">
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
-				</div>
-				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
-			</article>
-			<article class="card">
-				<div class="card-header">
-					<h3 class="card-title">Hotel 2</h3>
-				</div>
-				<div class="card-body">
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
-				</div>
-				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
-			</article>
-			<article class="card">
-				<div class="card-header">
-					<h3 class="card-title">Hotel 3</h3>
-				</div>
-				<div class="card-body">
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod.</p>
-				</div>
-				<div class="card-footer"><a href="https://example.com" class="card-link">Leer más</a></div>
-			</article>
+
+	<!-- Page content -->
+	<div class="w3-content" style="max-width:1532px;">
+
+		<div class="w3-container w3-margin-top" id="Habitaciones">
+			<h3>Habitaciones</h3>
+			<p>Una amplia variedad de instalaciones perfectamente equipadas</p>
 		</div>
-		<form action="./reservar.php" target="_blank" method="post">
-			<div class="input-base">
-				<select name="hotel" id="hotel_select">
-					<option value=""></option>
-					<option value="hotel_1">Hotel 1</option>
-					<option value="hotel_2">Hotel 2</option>
-					<option value="hotel_3">Hotel 3</option>
-				</select>
-				<label for="hotel_select">Hotel de residencia</label>
+
+		<div class="w3-row-padding">
+			<div class="w3-col m3">
+				<label><i class="fa fa-calendar-o"></i> Llegada</label>
+				<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
 			</div>
-			<div class="input-base">
-				<input type="date" value="" name="arrival_date" id="arrival_date_input" required>
-				<label for="arrival_date_input">Fecha de llegada</label>
+			<div class="w3-col m3">
+				<label><i class="fa fa-calendar-o"></i> Salida</label>
+				<input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
 			</div>
-			<div class="input-base">
-				<input type="date" name="departure_date" id="departure_date_input">
-				<label for="departure_date_input">Fecha de salida</label>
+			<div class="w3-col m2">
+				<label><i class="fa fa-male"></i> Adultos</label>
+				<input class="w3-input w3-border" type="number" placeholder="1">
 			</div>
-			<div class="input-base">
-				<input type="number" name="people" id="people_input">
-				<label for="people_input">Número de personas</label>
+			<div class="w3-col m2">
+				<label><i class="fa fa-child"></i> Niños</label>
+				<input class="w3-input w3-border" type="number" placeholder="0">
 			</div>
-			<input class="submit" type="submit" value="Reservar">
-		</form>
-	</main>
+			<div class="w3-col m2">
+				<label><i class="fa fa-search"></i> Buscar</label>
+				<button class="w3-button w3-block w3-black">Buscar</button>
+			</div>
+		</div>
+
+		<div class="w3-row-padding w3-padding-16">
+			<div class="w3-third w3-margin-bottom">
+				<img
+					src="https://www.lopesan.com/img/hotels/4981/494-1000-1000-1000-habitacion-family-room-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg"
+					alt="Norway" style="width:100%">
+				<div class="w3-container w3-white">
+					<h3>Family Room</h3>
+					<h6 class="w3-opacity">Desde 275€</h6>
+					<p>2 camas</p>
+					<p>40m<sup>2</sup></p>
+					<p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+							class="fa fa-tv"></i></p>
+					<button class="w3-button w3-block w3-black w3-margin-bottom">Ver Habitación</button>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img
+					src="https://www.lopesan.com/img/hotels/5906/600-1000-1000-1000-habitacion-deluxe-pmr-adaptada-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg"
+					alt="Norway" style="width:100%">
+				<div class="w3-container w3-white">
+					<h3>Deluxe</h3>
+					<h6 class="w3-opacity">Desde 172€</h6>
+					<p>1 cama</p>
+					<p>40m<sup>2</sup></p>
+					<p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+							class="fa fa-tv"></i></p>
+					<button class="w3-button w3-block w3-black w3-margin-bottom">Ver Habitación</button>
+				</div>
+			</div>
+			<div class="w3-third w3-margin-bottom">
+				<img
+					src="https://www.lopesan.com/img/hotels/4998/494-1000-1000-1000-sala-habitacion-suite-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg"
+					alt="Norway" style="width:100%" width="300" height="290">
+				<div class="w3-container w3-white">
+					<h3>Suite</h3>
+					<h6 class="w3-opacity">Desde 390€</h6>
+					<p>1 cama</p>
+					<p>63m<sup>2</sup></p>
+					<p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+							class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+					<button class="w3-button w3-block w3-black w3-margin-bottom">Ver Habitación</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-row-padding" id="Sobre Nosotros">
+			<div class="w3-col l4 12">
+				<h3>Sobre Nosotros</h3>
+				<h6>El hotel Lopesan Costa Meloneras Resort & Spa es el lugar perfecto para disfrutar de unas vacaciones
+					inolvidables. Este emblemático Resort se encuentra en Meloneras, la zona turística más exclusiva de la isla de
+					Gran Canaria. Los sorprendentes parajes de la Reserva Natural de las Dunas de Maspalomas y su emblemático
+					Boulevard, acompañado del icónico Faro de Maspalomas dotan al destino de un carácter único en el que poder
+					soñar y relajarse mientras disfrutas de largos paseos junto al océano Atlántico.
+
+					Nada más llegar al Lopesan Costa Meloneras Resort & Spa, en el sur de Gran Canaria, nos recibe un majestuoso
+					palacio, donde sus ventanas, puertas y pórticos trasladan a sus huéspedes a la época colonial, tan icónica en
+					la arquitectura de las islas. Una vez atravesada la entrada, nos espera un exuberante jardin tropical de más
+					de 76.000 m2 de superficie, con más de 800 palmeras, de 100 especies y subespeci es diferentes, que nos
+					acompañarán hasta nuestra habitación y nos harán sentir en un oasis en medio de este paisaje desértico de
+					dunas que se pierden en el mar. Todo está pensado para relajarnos, y experimentar un ambiente acogedor y
+					cercano que cautiva al instante.</h6>
+				<p>Aceptamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
+						class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i
+						class="fa fa-cc-paypal w3-large"></i></p>
+			</div>
+			<div class="w3-col l8 12">
+				<!-- Image of location/map -->
+				<img src="https://images.corendonresources.com/L1E9238A3W1024H684.jpg?v=210515020154" style="width:90%;">
+			</div>
+		</div>
+
+		<div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+			<div class="w3-third"><i class="fa fa-map-marker w3-text-green"></i> Calle Mar Mediterráneo, Gran Canaria, España
+			</div>
+			<div class="w3-third"><i class="fa fa-phone w3-text-green"></i> Móvil: +34 928 128 100</div>
+			<div class="w3-third"><i class="fa fa-envelope w3-text-green"></i> Email: costameloneras@lopesan.com</div>
+		</div>
+
+		<div class="w3-panel w3-red w3-leftbar w3-padding-32">
+			<h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> También ofrecemos acceso a internet,
+				servicios de maletero 24h y caja fuerte</h6>
+		</div>
+
+		<div class="w3-container">
+			<h3>Nuestros Hoteles</h3>
+			<h6>Puedes encontrar nuestros hoteles en:</h6>
+		</div>
+
+		<div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
+			<div class="w3-half w3-margin-bottom">
+				<div class="w3-display-container">
+					<img src="https://www.doyouspain.com/cdn/cache7/img/info/ES/gran_canaria/guia-turistica1.jpg" alt="España"
+						style="width:97%">
+					<span class="w3-display-bottomleft w3-padding">España</span>
+				</div>
+			</div>
+			<div class="w3-half">
+				<div class="w3-row-padding" style="margin:0 -16px">
+					<div class="w3-half w3-margin-bottom">
+						<div class="w3-display-container">
+							<img src="https://www.turismotailandes.com/wp-content/uploads/2015/05/tailandia.jpg" alt="Tailandia"
+								style="width:90%">
+							<span class="w3-display-bottomleft w3-padding">Tailandia</span>
+						</div>
+					</div>
+					<div class="w3-half w3-margin-bottom">
+						<div class="w3-display-container">
+							<img
+								src="https://media.iatiseguros.com/wp-content/uploads/2021/05/13100231/que-ver-republica-dominicana-3.jpg"
+								alt="República Dominicana" style="width:100%">
+							<span class="w3-display-bottomleft w3-padding">República Dominicana</span>
+						</div>
+					</div>
+				</div>
+				<div class="w3-row-padding" style="margin:0 -16px">
+					<div class="w3-half w3-margin-bottom">
+						<div class="w3-display-container">
+							<img
+								src="https://photo980x880.mnstatic.com/807bafdaeed88061afc72505c7eb173f/puerta-de-brandeburgo-3013021.jpg"
+								alt="Alemania" style="width:97.7%">
+							<span class="w3-display-bottomleft w3-padding">Alemania</span>
+						</div>
+					</div>
+					<div class="w3k-half w3-margin-bottom">
+						<div class="w3-display-container">
+							<img
+								src="https://images.unsplash.com/photo-1597086831879-756db15e81d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8JTIwYXVzdHJpYXxlbnwwfHwwfHw%3D&w=1000&q=80"
+								alt="Austria" style="width:86%">
+							<span class="w3-display-bottomleft w3-padding">Austria</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-container w3-padding-32 w3-black w3-opacity w3-card w3-hover-opacity-off" style="margin:32px 0;">
+			<h2>Obtén las mejores ofertas</h2>
+			<p>Únete a nuestra revista.</p>
+			<label>Email</label>
+			<input class="w3-input w3-border" type="text" placeholder="Tu Email">
+			<button type="button" class="w3-button w3-red w3-margin-top">Suscríbete</button>
+		</div>
+
+		<div class="w3-container" id="Contacto">
+			<h2>Contacto</h2>
+			<p>Si tiene alguna pregunta, no dude en preguntarnos</p>
+			<i class="fa fa-map-marker w3-text-green" style="width:30px"></i> Gran Canaria, España<br>
+			<i class="fa fa-phone w3-text-green" style="width:30px"></i> Teléfono: +34 928 128 100<br>
+			<i class="fa fa-envelope w3-text-green" style="width:30px"> </i> Email: costameloneras@lopesan.com<br>
+			<form action="/action_page.php" target="_blank">
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Nombre"></p>
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+				<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Mensaje">
+				</p>
+				<p><button class="w3-button w3-black w3-padding-large" type="submit">ENVIAR MENSAJE</button></p>
+			</form>
+		</div>
+
+		<!-- End page content -->
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+		<h5>Encuéntranos en</h5>
+		<div class="w3-xlarge w3-padding-16">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>
+		</div>
+		<p> Hecho por Pablo, Andrea, Miriam y Aurora</p>
+	</footer>
+
 </body>
 
 </html>
