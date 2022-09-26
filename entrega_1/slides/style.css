@@ -192,3 +192,63 @@ h2 {
 	padding-top: 10rem;
 	width: 1500px;
 }
+
+code {
+	display: block;
+	padding: 2rem;
+	background-color: rgb(40, 40, 78);
+	font-family: 'Roboto Mono', monospace;
+	color: white;
+}
+
+code .selector {
+	color: lightblue
+}
+
+code .brace {
+	color: yellow
+}
+
+code .rule {
+	color: lightblue
+}
+
+code .number {
+	color: lightgreen
+}
+
+code .how {
+	color: pink;
+}
+
+.button-stack {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.button-stack button {
+	padding: 4rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 4rem;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	background-color: #ffa3a3;
+}
+
+.button-stack button:hover {
+	background-color: #7b0000;
+	color: white;
+}
+
+button.example2 {
+	transition: background-color 200ms ease,
+		color 200ms ease;
+}
+
+button.example3 {
+	transition: background-color 1000ms ease,
+		color 800ms ease;
+}
