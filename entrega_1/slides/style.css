@@ -28,6 +28,7 @@ h1 {
 
 h2 {
 	font-size: 4rem;
+	z-index: 1;
 }
 
 
@@ -50,6 +51,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 	background-color: #fff;
 	height: 1050px;
 	width: 1680px;
@@ -152,4 +154,41 @@ h2 {
 
 .acc6 {
 	height: 600px;
+}
+
+.seo1 {
+	padding: 5rem;
+	width: 600px;
+}
+
+.seo2 {
+	height: 900px;
+	transform: translateY(-180px);
+}
+
+.seo-stack {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 5rem;
+	height: 100%;
+}
+
+.seo4 {
+	height: 700px;
+}
+
+.seo5,
+.seo6,
+.seo7 {
+	position: absolute;
+	top: 220px;
+	left: 70px;
+	width: 1600px;
+	z-index: 0;
+}
+
+.seo8 {
+	padding-top: 10rem;
+	width: 1500px;
 }
