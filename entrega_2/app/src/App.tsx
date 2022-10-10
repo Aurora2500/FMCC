@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Button, Drawer, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Container, Drawer, IconButton, Paper, Stack, Toolbar, Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 import { Box } from "@mui/system";
 import { Menu } from "@mui/icons-material";
@@ -58,7 +58,18 @@ const App = () => {
 
 			</Drawer>
 			<Toolbar/>
-			<Outlet/>
+			<Container maxWidth="lg" sx={{mt: 5}}>
+				<Outlet/>
+			</Container>
+			<Paper sx={{height: 200, backgroundColor: "black"}} square>
+				<Container>
+					<Stack direction="row" justifyContent="center" sx={{pt: 10}}>
+						<Typography color="white" variant="h5">
+							Hecho por Pablo, Andrea, Miriam y Aurora
+						</Typography>
+					</Stack>
+				</Container>
+			</Paper>
 		</>
 	);
 };
