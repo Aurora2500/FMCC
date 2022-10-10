@@ -8,12 +8,22 @@ import {
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 import { theme } from "./app/theme";
+import Rooms from "./features/rooms/Rooms";
+import Main from "./app/Main";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App/>,
 		children: [
+			{
+				path: "/",
+				element: <Main/>,
+			},
+			{
+				path: "/habitaciones",
+				element: <Rooms/>,
+			}
 		]
 	}
 ]);
