@@ -14,11 +14,14 @@
     "@mui/icons-material": "^5.10.6",
     "@mui/lab": "^5.0.0-alpha.102",
     "@mui/material": "^5.10.8",
+    "@mui/x-date-pickers-pro": "^5.0.4",
+    "luxon": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
+    "@types/luxon": "^3.0.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.39.0",

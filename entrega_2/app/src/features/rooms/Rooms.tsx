@@ -1,26 +1,7 @@
 import React from "react";
-import { availableRooms, Room, Services } from "data";
+import { availableRooms, Room, ServiceIcon } from "data";
 import { Button, Card, CardContent, CardHeader, CardMedia, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
-import { Bathtub, LocalBar, Phone, Restaurant, Tv, Wifi } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-
-const ServiceIcon: React.FC<{service: Services}> = ({service}) => {
-	switch (service) {
-	case "Hot Tub":
-		return <Bathtub/>;
-	case "Phone":
-		return <Phone/>;
-	case "Wifi":
-		return <Wifi/>;
-	case "TV":
-		return <Tv/>;
-	case "Bar": 
-		return <LocalBar/>;
-	case "Breakfast":
-		return <Restaurant/>;
-	
-	}
-};
 
 const RoomCard: React.FC<{room: Room}> = ({room}) => {
 	return (

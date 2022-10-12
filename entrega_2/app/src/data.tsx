@@ -1,3 +1,5 @@
+import React from "react";
+import { Bathtub, LocalBar, Phone, Restaurant, Tv, Wifi } from "@mui/icons-material";
 
 export type Services
 	= "Hot Tub"
@@ -7,6 +9,24 @@ export type Services
 	| "Bar"
 	| "Breakfast"
 	;
+
+export const ServiceIcon: React.FC<{service: Services}> = ({service}) => {
+	switch (service) {
+	case "Hot Tub":
+		return <Bathtub/>;
+	case "Phone":
+		return <Phone/>;
+	case "Wifi":
+		return <Wifi/>;
+	case "TV":
+		return <Tv/>;
+	case "Bar": 
+		return <LocalBar/>;
+	case "Breakfast":
+		return <Restaurant/>;
+	}
+};
+
 
 export interface Room {
 	name: string;
