@@ -58,7 +58,7 @@ const App = () => {
 
 			</Drawer>
 			<Toolbar/>
-			<Container maxWidth="lg" sx={{mt: 5}}>
+			<Container maxWidth="lg" sx={{my: 5}}>
 				<Outlet/>
 			</Container>
 			<Paper sx={{height: 200, backgroundColor: "black"}} square>

@@ -10,9 +10,33 @@ export default defineConfig({
 		tsconfigPaths(),
 		VitePWA({
 			registerType: "autoUpdate",
+			includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
+			manifest : {
+				name: "Lopesan Costa Meloneras",
+				short_name: "Lopesan",
+				theme_color: "#D4A373",
+				icons: [
+					{
+						src: "pwa-192x192.jpeg",
+						sizes: "192x192",
+						type: "image/jpeg",
+					},
+					{
+						src: "pwa-512x512.jpeg",
+						sizes: "512x512",
+						type: "image/jpeg",
+					},
+					{
+						src: "pwa-512x512.jpeg",
+						sizes: "512x512",
+						type: "image/jpeg",
+						purpose: "any maskable",
+					},
+				]
+			},
 			devOptions: {
 				enabled: true,
-			}
+			},
 		})
 	]
 });

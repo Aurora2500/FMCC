@@ -10,6 +10,7 @@ export type Services
 
 export interface Room {
 	name: string;
+	id: string;
 	image: string;
 	description: string;
 	price: number;
@@ -18,14 +19,47 @@ export interface Room {
 	services: Services[];
 }
 
-export const availableRooms: Room[] = [
-	{
+export const availableRoomMap: Record<string, Room> = {
+	"family": {
 		name: "Family Room",
+		id: "family",
 		description: "Una habitación con una cama doble y una cama individual. Perfecta para familias.",
-		image: "https://images.unsplash.com/photo-1579622340929-8c7f8f9b9b0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80https://www.lopesan.com/img/hotels/4981/494-1000-1000-1000-habitacion-family-room-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg",
+		image: "https://www.grancanariaregional.com/wp-content/uploads/2018/10/altamar-room-with-view.jpg",
 		price: 275,
-		beds: 3,
+		beds: 2,
 		size: 40,
 		services: ["Hot Tub", "Phone", "Wifi", "TV"],
-	}
-];
+	},
+	"luxury": {
+		name: "Luxury room",
+		id: "luxury",
+		description: "Una habitación con cama doble para disfrutar con lujo.",
+		image: "https://www.theakyra.com/files/2715/7104/5077/Serviced_Apartment_Hotel_Stay.jpg",
+		price: 300,
+		beds: 1,
+		size: 50,
+		services: ["Hot Tub", "Phone", "Wifi", "TV", "Bar", "Breakfast"],
+	},
+	"deluxe": {
+		name: "Deluxe",
+		id: "deluxe",
+		description: "Una habitación con cama doble para disfrutar de las vacaciones.",
+		image: "https://www.lopesan.com/img/hotels/4981/494-1000-1000-1000-habitacion-family-room-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg",
+		price: 275,
+		beds: 1,
+		size: 40,
+		services: ["Hot Tub", "Phone", "Wifi", "TV", "Bar", "Breakfast"],
+	},
+	"suite": {
+		name: "Suite",
+		id: "suite",
+		description: "Una habitación suite.",
+		price: 390,
+		image: "https://www.lopesan.com/img/hotels/4998/494-1000-1000-1000-sala-habitacion-suite-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg",
+		size: 63,
+		beds: 1,
+		services: ["Hot Tub", "Phone", "Wifi", "TV", "Bar", "Breakfast"],
+	},
+};
+
+export const availableRooms: Room[] = Object.values(availableRoomMap);
