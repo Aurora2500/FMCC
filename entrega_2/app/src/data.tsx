@@ -74,12 +74,32 @@ export const availableRoomMap: Record<string, Room> = {
 		name: "Suite",
 		id: "suite",
 		description: "Una habitación suite.",
-		price: 390,
 		image: "https://www.lopesan.com/img/hotels/4998/494-1000-1000-1000-sala-habitacion-suite-lopesan-costa-meloneras-resort-spa-gran-canaria.jpg",
+		price: 390,
 		size: 63,
 		beds: 1,
 		services: ["Hot Tub", "Phone", "Wifi", "TV", "Bar", "Breakfast"],
 	},
+	"business": {
+		name: "Business",
+		id: "business",
+		description: "Una habitación para estancias de negocios.",
+		image: "https://www.legacybangkok.com/en/media/img/executive/ex-1.jpg",
+		price: 400,
+		size: 40,
+		beds: 1,
+		services: ["Hot Tub", "Phone", "Wifi", "TV", "Bar", "Breakfast"],
+	},
+	"apartment": {
+		name: "Apartamento",
+		id: "apartment",
+		description: "Una habitación estilo apartamento para estancias más largas.",
+		image: "https://assets-news.housing.com/news/wp-content/uploads/2020/06/24181135/Everything-you-need-to-know-about-studio-apartments-FB-1200x700-compressed.jpg",
+		price: 200,
+		size: 45,
+		beds: 1,
+		services: ["Hot Tub", "Phone", "Wifi", "TV"],
+	}
 };
 
 export const availableRooms: Room[] = Object.values(availableRoomMap);

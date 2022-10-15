@@ -34,14 +34,12 @@ const RoomCard: React.FC<{room: Room}> = ({room}) => {
 };
 
 const Rooms = () => {
-	const mw = useMediaQuery("(min-width: 800px)");
-
 	return (
 		<>
 			<Typography variant="h3">
 				Nuestras habitaciones
 			</Typography>
-			<Grid container gap={3} >
+			<Grid container gap={3} justifyContent="center" >
 				{availableRooms.map(room => (
 					<Grid item key={room.id} >
 						<RoomCard room={room}/>

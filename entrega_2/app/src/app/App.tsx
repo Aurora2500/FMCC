@@ -1,5 +1,5 @@
-import React from "react";
-import { AppBar, Button, Container, Drawer, IconButton, Paper, Stack, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Button, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Paper, Stack, Toolbar, Typography } from "@mui/material";
 import { Outlet, Link } from "react-router-dom";
 import { Box } from "@mui/system";
 import { Menu } from "@mui/icons-material";
@@ -21,6 +21,8 @@ const navLinks: NavLink[] = [
 ];
 
 const App = () => {
+
+	const [open, setOpen] = useState(false);
 
 	return (
 		<>
@@ -46,7 +48,7 @@ const App = () => {
 						justifyContent="space-between"
 						sx={{height: "100%"}}
 						alignItems="center">
-						<IconButton><Menu/></IconButton>
+						<IconButton onClick={() => setOpen(true)}><Menu/></IconButton>
 						<Typography variant="h4">
 						Lopesan
 						</Typography>
@@ -54,8 +56,19 @@ const App = () => {
 					</Stack>
 				</Toolbar>
 			</AppBar>
-			<Drawer>
-
+			<Drawer
+				open={open}
+				onClose={() => setOpen(false)}
+			>
+				<List>
+					{navLinks.map(link => (
+						<ListItem key={link.label} disablePadding>
+							<ListItemButton component={Link} to={link.href} onClick={() => setOpen(false)}>
+								<ListItemText primary={link.label} />
+							</ListItemButton>
+						</ListItem>
+					))}
+				</List>
 			</Drawer>
 			<Toolbar/>
 			<Container maxWidth="lg" sx={{my: 5}}>

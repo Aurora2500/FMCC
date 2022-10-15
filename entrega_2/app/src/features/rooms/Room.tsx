@@ -59,7 +59,7 @@ const RoomElement = () => {
 
 				<Stack gap={5}>
 					<Stack direction="row" justifyContent="center">
-						<img src={room.image} alt={room.name} height={400}/>
+						<Box component="img" src={room.image} alt={room.name} sx={{height: { lg: 400, xs: 200}}} />
 					</Stack>
 					<Typography variant="h3">{room.name}</Typography>
 					<Typography>{room.description}</Typography>

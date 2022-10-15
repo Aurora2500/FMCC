@@ -1,5 +1,5 @@
 import { Masonry } from "@mui/lab";
-import { Container, Divider, Typography, useMediaQuery } from "@mui/material";
+import { Divider, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 
 interface Image {
@@ -71,7 +71,7 @@ const images: Image[] = [
 	{
 		url: "https://images.photowall.com/products/60742/palm-trees-on-white-beach.jpg?h=699&q=85",
 		title: "Palmeras",
-	}
+	},
 ];
 
 const Main =  () => {
