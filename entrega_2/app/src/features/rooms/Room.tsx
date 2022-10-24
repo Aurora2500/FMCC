@@ -1,53 +1,8 @@
-import { Box, Button, Paper, Stack, Table, TableBody, TableCell, TableRow, TextField, Typography } from "@mui/material";
+import { Box, Stack, Table, TableBody, TableCell, TableRow, Typography } from "@mui/material";
 import { Room, ServiceIcon } from "data";
-import React, { useState } from "react";
+import { Form } from "Form";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
-import { DateTime } from "luxon";
-import { DateRange, DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
-import { AdapterLuxon } from "@mui/x-date-pickers-pro/AdapterLuxon";
-import { LocalizationProvider } from "@mui/x-date-pickers-pro";
-
-const Form = () => {
-	const [days, setDays] = useState<DateRange<DateTime>>([null, null]);
-	return (
-		<Paper sx={{p: 4}}>
-			<Stack gap={3} alignItems="center">
-
-			Días de estancia:
-				<LocalizationProvider
-					dateAdapter={AdapterLuxon}
-				>
-					<DateRangePicker
-						value={days}
-						onChange={(newValue) => {
-							setDays(newValue);
-						}}
-						renderInput={(startProps, endProps) => (
-							<>
-								<TextField {...startProps} />
-								<Box sx={{ mx: 2 }}> to </Box>
-								<TextField {...endProps} />
-							</>
-						)}
-					/>
-				</LocalizationProvider>
-				<Stack direction="row" gap={6}>
-					<TextField
-						label="Número de adultos"
-						type="number"
-					/>
-					<TextField
-						label="Número de niños"
-						type="number"
-					/>
-				</Stack>
-
-				<Button variant="outlined">Reservar</Button>
-			</Stack>
-		</Paper>
-	);
-};
-
 const RoomElement = () => {
 
 	const room = useLoaderData() as Room;
@@ -84,7 +39,6 @@ const RoomElement = () => {
 						</TableBody>
 					</Table>
 				</Stack>
-
 				<Form />
 			</Stack>
 		</>

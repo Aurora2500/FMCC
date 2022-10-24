@@ -1,5 +1,6 @@
 import { Masonry } from "@mui/lab";
 import { Divider, Typography, useMediaQuery } from "@mui/material";
+import { Form } from "Form";
 import React from "react";
 
 interface Image {
@@ -80,6 +81,8 @@ const Main =  () => {
 
 	return (
 		<>
+			<Form/>
+			<Divider sx={{my: 5}} />
 			<Typography
 				variant="h3"
 			>
